@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XR Sound Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(180deg,#050510 0%,#0b1020 30%,#111827 60%,#050510 100%);
+      color:white;
+      overflow-x:hidden;
+      scroll-behavior:smooth;
+    }
+
+    section{
+      padding:100px 8%;
+      position:relative;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:radial-gradient(circle at center,#1e3a8a55,transparent 60%), url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1600&q=80') center/cover;
+    }
+
+    .hero h1{
+      font-family:'Orbitron',sans-serif;
+      font-size:4rem;
+      background:linear-gradient(90deg,#38bdf8,#a855f7,#ec4899);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      margin-bottom:20px;
+    }
+
+    .hero p{max-width:800px;font-size:1.2rem;line-height:1.8;}
+
+    .btn{
+      margin-top:30px;
+      padding:14px 28px;
+      border:none;
+      border-radius:14px;
+      background:linear-gradient(90deg,#2563eb,#9333ea);
+      color:white;
+      font-size:1rem;
+      cursor:pointer;
+      transition:.3s;
+      box-shadow:0 0 20px #7c3aed66;
+    }
+    .btn:hover{transform:translateY(-3px) scale(1.05);}
+
+    .section-title{
+      font-family:'Orbitron',sans-serif;
+      font-size:2.6rem;
+      margin-bottom:30px;
+      position:relative;
+      display:inline-block;
+    }
+
+    .section-title::after{
+      content:'';
+      display:block;
+      width:70%;
+      height:4px;
+      margin-top:10px;
+      background:linear-gradient(90deg,#38bdf8,#a855f7);
+      border-radius:10px;
+    }
+
+    .content-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .content-grid img{
+      width:100%;
+      border-radius:24px;
+      box-shadow:0 0 30px #3b82f655;
+    }
+
+    .card-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:20px;
+      padding:25px;
+      backdrop-filter:blur(12px);
+      transition:.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 0 25px #8b5cf655;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(80px);
+      transition:all 1s ease;
+    }
+
+    .reveal.active{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    footer{
+      text-align:center;
+      padding:80px 20px;
+      background:#03030a;
+    }
+
+    @media(max-width:900px){
+      .content-grid{grid-template-columns:1fr;}
+      .hero h1{font-size:2.8rem;}
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>XR SOUND STUDIO</h1>
+  <p>Иммерсивный XR-плеер нового поколения — музыка, пространство и технологии в одной виртуальной студии.</p>
+  <button class="btn">Пройти опрос</button>
+</section>
+
+<section class="reveal">
+  <h2 class="section-title">О проекте</h2>
+  <div class="content-grid">
+    <p>XR Sound Studio — это инновационное XR-приложение для VR-гарнитур, позволяющее слушать музыку в виртуальной студии с визуальным окружением и интерактивным интерфейсом.</p>
+    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80" alt="studio">
+  </div>
+</section>
+
+<section class="reveal">
+  <h2 class="section-title">Проблема</h2>
+  <div class="content-grid">
+    <p>Обычные музыкальные приложения не создают эмоционального погружения. Пользователь получает лишь звук, но не атмосферу и уникальный опыт взаимодействия.</p>
+    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80" alt="problem">
+  </div>
+</section>
+
+<section class="reveal">
+  <h2 class="section-title">Решение</h2>
+  <div class="content-grid">
+    <p>Наш проект переносит прослушивание музыки в виртуальную студию, где пользователь взаимодействует с плеером, обложками и атмосферой как с частью цифрового пространства.</p>
+    <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=1200&q=80" alt="solution">
+  </div>
+</section>
+
+<section class="reveal">
+  <h2 class="section-title">Для кого проект</h2>
+  <div class="card-grid">
+    <div class="card"><h3>Любители VR</h3><p>Те, кто ищет новый формат цифрового опыта.</p></div>
+    <div class="card"><h3>Музыкальные энтузиасты</h3><p>Люди, ценящие атмосферу и визуальное сопровождение.</p></div>
+    <div class="card"><h3>Технологические пользователи</h3><p>Те, кто интересуется XR и инновациями.</p></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2 class="section-title">Ключевые возможности</h2>
+  <div class="card-grid">
+    <div class="card">Извлечение метаданных MP3</div>
+    <div class="card">Отображение обложек</div>
+    <div class="card">3D-виртуальная студия</div>
+    <div class="card">Управление жестами / VR-контроллерами</div>
+    <div class="card">Иммерсивное аудио-пространство</div>
+  </div>
+</section>
+
+<section class="reveal" style="text-align:center;">
+  <h2 class="section-title">Помогите улучшить проект</h2>
+  <p>Ваше мнение важно — примите участие в опросе и помогите нам создать лучший XR-музыкальный опыт.</p>
+  <button class="btn">Перейти к анкете</button>
+</section>
+
+<footer>
+  <h2>XR Sound Studio</h2>
+  <p>Музыка будущего в виртуальной реальности</p>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+window.addEventListener('scroll', () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add('active');
+    }
+  });
+});
+
+
+    // Floating music notes background
+    const symbols = ['♩','♪','♫','♬'];
+    const notesContainer = document.createElement('div');
+    notesContainer.style.position = 'fixed';
+    notesContainer.style.top = '0';
+    notesContainer.style.left = '0';
+    notesContainer.style.width = '100%';
+    notesContainer.style.height = '100%';
+    notesContainer.style.pointerEvents = 'none';
+    notesContainer.style.overflow = 'hidden';
+    notesContainer.style.zIndex = '0';
+    document.body.appendChild(notesContainer);
+
+    function createNote(){
+      const note = document.createElement('span');
+      note.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+      note.style.position = 'absolute';
+      note.style.left = Math.random()*100 + 'vw';
+      note.style.top = '100vh';
+      note.style.fontSize = (16 + Math.random()*20) + 'px';
+      note.style.color = `rgba(${100+Math.random()*155}, ${100+Math.random()*100}, 255, 0.35)`;
+      note.style.transition = 'transform 10s linear, opacity 10s linear';
+      notesContainer.appendChild(note);
+
+      requestAnimationFrame(() => {
+        note.style.transform = `translateY(-120vh) rotate(${Math.random()*360}deg)`;
+        note.style.opacity = '0';
+      });
+
+      setTimeout(() => note.remove(), 10000);
+    }
+
+    setInterval(createNote, 700);
+  </script>
+
+</body>
+</html>
