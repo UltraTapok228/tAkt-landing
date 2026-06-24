@@ -245,16 +245,17 @@
 
 <section class="hero">
   <h1>tAkt music-player</h1>
-  <p>ИММЕРСИВНЫЙ XR-ПЛЕЕР НОВОГО ПОКОЛЕНИЯ // МУЗЫКА, ПРОСТРАНСТВО И ТЕХНОЛОГИИ В ОДНОЙ ВИРТУАЛЬНОЙ СТУДИИ.</p>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScqwNmKXSd5E6eHSwQjY7tuj7vVuyw8AVfFHWZCj4PCPs-tRQ/viewform?usp=publish-editor" target="_blank" class="btn">
-    > ИНИЦИАЛИЗАЦИЯ ОПРОСА_
+  <p>АЛЬТЕРНАТИВНЫЙ ЛОКАЛЬНЫЙ МЕДИАПЛЕЕР // ФОКУС НА ВИЗУАЛЬНЫЙ ОПЫТ И ИНДАСТРИАЛ-ЭСТЕТИКУ.</p>
+  
+  <a href="tAkt_v1.0.apk" download="tAkt.apk" class="btn">
+    > СКАЧАТЬ ПРИЛОЖЕНИЕ (.APK)
   </a>
 </section>
 
 <section class="reveal">
   <h2 class="section-title">О ПРОЕКТЕ</h2>
   <div class="content-grid">
-    <p>tAkt — это инновационное XR-приложение для гарнитур, позволяющее слушать музыку в виртуальной студии с визуальным окружением и суровым интерактивным интерфейсом. Полный контроль над аудио-пространством.</p>
+    <p>tAkt — это локальный Android-аудиоплеер для тех, кому важна атмосфера. Строгий плоский интерфейс без лишнего объема, акцент на крупные детализированные обложки и стабильная фоновая работа.</p>
     <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80" alt="studio gear">
   </div>
 </section>
@@ -262,7 +263,7 @@
 <section class="reveal">
   <h2 class="section-title">ПРОБЛЕМА</h2>
   <div class="content-grid">
-    <p>Обычные музыкальные плееры стерильны. Пользователь получает лишь звук, но не атмосферу. Плоские экраны лишают музыку физического веса и объема.</p>
+    <p>Стандартные системные плееры слишком минималистичны и стерильны. Они абсолютно не передают драйв и энергию тяжелой или андеграундной музыки, превращая прослушивание в скучный рутинный процесс.</p>
     <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" alt="grunge concrete">
   </div>
 </section>
@@ -270,40 +271,42 @@
 <section class="reveal">
   <h2 class="section-title">РЕШЕНИЕ</h2>
   <div class="content-grid">
-    <p>Перенос прослушивания в XR-среду. Взаимодействие с интерфейсом как с реальным студийным оборудованием. Тактильный отклик контроллеров и визуализация ритма в пространстве.</p>
+    <p>Агрессивная, тактильная монохромная палитра в стиле "индастриал". Глубокая интеграция с системой через MediaSession для управления со смарт-часов, а также эксклюзивная вкладка для прослушивания встроенных авторских релизов.</p>
     <img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?auto=format&fit=crop&w=1200&q=80" alt="mesh network">
   </div>
 </section>
 
 <section class="reveal">
-  <h2 class="section-title">ЦЕЛЕВОЙ СЕКТОР</h2>
+  <h2 class="section-title">КОМУ ЗАЙДЁТ</h2>
   <div class="card-grid">
-    <div class="card"><h3>VR-ОПЕРАТОРЫ</h3><p>Ищут новый формат цифрового аудио-опыта.</p></div>
-    <div class="card"><h3>АУДИО-ЭНТУЗИАСТЫ</h3><p>Ценят плотную атмосферу и визуальное сопровождение треков.</p></div>
-    <div class="card"><h3>ТЕХ-ГИКИ</h3><p>Интересуются границами возможностей OpenXR.</p></div>
+    <div class="card"><h3>ФАНАТЫ ТЯЖЕЛОЙ МУЗЫКИ</h3><p>Ценят строгую эстетику, которая соответствует их музыкальному вкусу и субкультуре.</p></div>
+    <div class="card"><h3>АУДИО-ЭНТУЗИАСТЫ</h3><p>Слушают музыку из локальной памяти устройства, предпочитая собственные оффлайн-библиотеки.</p></div>
+    <div class="card"><h3>ПОЛЬЗОВАТЕЛИ ANDROID</h3><p>Ищут удобный и стабильный плеер с полным контролем из шторки уведомлений.</p></div>
   </div>
 </section>
 
 <section class="reveal">
-  <h2 class="section-title">МОДУЛИ СИСТЕМЫ</h2>
+  <h2 class="section-title">МОДУЛИ ЯДРА</h2>
   <div class="card-grid">
-    <div class="card">ИЗВЛЕЧЕНИЕ ID3-МЕТАДАННЫХ</div>
-    <div class="card">РЕНДЕР ОБЛОЖЕК (ALBUM ART)</div>
-    <div class="card">XR-ПРОСТРАНСТВО</div>
-    <div class="card">ТРЕКИНГ РУК / КОНТРОЛЛЕРОВ</div>
-    <div class="card">ПРОСТРАНСТВЕННОЕ АУДИО</div>
+    <div class="card">ПАРСИНГ MEDIASTORE</div>
+    <div class="card">ФОНОВЫЙ MUSICSERVICE</div>
+    <div class="card">СИСТЕМНЫЙ MEDIASESSION</div>
+    <div class="card">ПЛОСКИЙ ИНДАСТРИАЛ UI</div>
+    <div class="card">ИНТЕГРАЦИЯ RAW-РЕЛИЗОВ (CRZC)</div>
   </div>
 </section>
 
 <section class="reveal" style="text-align:center;">
-  <h2 class="section-title">ОБРАТНАЯ СВЯЗЬ</h2>
-  <p style="margin-bottom: 20px;">Системе требуются калибровочные данные. Заполните форму.</p>
-  <button class="btn">> НАЧАТЬ ПЕРЕДАЧУ ДАННЫХ</button>
+  <h2 class="section-title">ИСХОДНЫЙ КОД</h2>
+  <p style="margin-bottom: 20px;">Проект имеет открытый исходный код. Архитектура и коммиты доступны в репозитории.</p>
+  <a href="https://github.com/UltraTapok228/tAkt-mobile-version.git" target="_blank" class="btn">
+    > ОТКРЫТЬ GITHUB_
+  </a>
 </section>
 
 <footer>
   <h2>tAkt // 2026</h2>
-  <p>СИСТЕМА АУДИО-ПОГРУЖЕНИЯ В ФАЗЕ ТЕСТИРОВАНИЯ</p>
+  <p>СИСТЕМА ЛОКАЛЬНОГО АУДИО-ВОСПРОИЗВЕДЕНИЯ V1.0</p>
 </footer>
 
 <script>
